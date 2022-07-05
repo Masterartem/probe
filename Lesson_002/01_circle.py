@@ -28,7 +28,7 @@ point = (23, 34)
 #       квадратный корень - это возведение в степень 0.5
 #       операции сравнения дают булевы константы True и False
 coordinate = ((23**2)+(34**2)) **0.5
-comparing = coordinate > square
+comparing = square > radius
 print(comparing)
 
 # Аналогично для другой точки
