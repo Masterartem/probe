@@ -49,6 +49,7 @@ print('Лампа -', lamps_quantity, 'шт, стоимость', lamps_cost, '�
 # WARNING для знающих циклы: БЕЗ циклов. Да, с переменными; да, неэффективно; да, копипаста.
 # Это задание на ручное вычисление - что бы потом понять как работают циклы и насколько с ними проще жить.
 
+#СТОЛ
 table_code = goods["Стол"]
 table_item_1 = store[table_code][0]
 table_quantity_1 = table_item_1["quantity"]
@@ -60,12 +61,40 @@ table_quantity_2 = table_item_2["quantity"]
 table_price_2 = table_item_2["price"]
 table_full_price_2 = table_quantity_2 * table_price_2
 
-
 table_full_quantity = (table_quantity_1 + table_quantity_2)
 table_full_cost = (table_full_price_1 + table_full_price_2)
 
-print('Лампа -', table_full_quantity, 'шт, стоимость', table_full_cost, 'руб')
+print('Стол -', table_full_quantity, 'шт, стоимость', table_full_cost, 'руб')
 
+#ДИВАН
+sofa = goods["Диван"]
+sofa_store_1 = store[sofa][0]
+sofa_quantity_1 = sofa_store_1["quantity"]
+sofa_price_1 = sofa_store_1["price"]
+sofa_full_price_1 = (sofa_quantity_1 * sofa_price_1)
+
+sofa_store_2 = store[sofa][1]
+sofa_quantity_2 = sofa_store_2["quantity"]
+sofa_price_2 = sofa_store_2["price"]
+sofa_full_price_2 = (sofa_quantity_2 * sofa_price_2)
+
+full_quantity = (sofa_quantity_1 + sofa_quantity_2)
+super_full_price = (sofa_full_price_1 + sofa_full_price_2)
+
+print("Диван - ",full_quantity,"шт,", "стоимость ", super_full_price, "руб")
+
+#СТУЛ
+Chair_price_1 = store[goods["Стул"]][0]["quantity"] * store[goods["Стул"]][0]["price"]
+Chair_price_2 = store[goods["Стул"]][1]["quantity"] * store[goods["Стул"]][1]["price"]
+Chair_price_3 = store[goods["Стул"]][2]["quantity"] * store[goods["Стул"]][2]["price"]
+Chair_quantity_1 = store[goods["Стул"]][0]["quantity"]
+Chair_quantity_2 = store[goods["Стул"]][1]["quantity"]
+Chair_quantity_3 = store[goods["Стул"]][2]["quantity"]
+
+Chair_full_quantity = (Chair_quantity_1 + Chair_quantity_2 + Chair_quantity_3)
+Chair_full_price = (Chair_price_1 + Chair_price_2 + Chair_price_3)
+
+print("Стул - ", Chair_full_quantity, "шт,", "стоимость", Chair_full_price, "руб")
 
 
 ##########################################################################################
