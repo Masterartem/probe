@@ -54,9 +54,9 @@ for staff in goods:
     values_of_staff = store[number_of_staff]
     for values in values_of_staff:
         quantity = values['quantity']
-        price = values['price']
+        price = values['price'] * quantity
         total_quantity += quantity
-        total_price = total_quantity * price
+        total_price += price
     print(total_quantity, total_price)
 
 
