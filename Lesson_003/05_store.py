@@ -46,7 +46,8 @@ store = {
         {'quantity': 43, 'price': 97},
     ],
 }
-
+full_total_quantity = 0
+full_total_price = 0
 for staff in goods:
     total_quantity = 0
     total_price = 0
@@ -57,7 +58,11 @@ for staff in goods:
         price = values['price'] * quantity
         total_quantity += quantity
         total_price += price
-    print(total_quantity, total_price)
+        full_total_quantity += total_quantity
+        full_total_price += total_price
+    print(staff, "Total Quantity", total_quantity, "Total price", total_price)
+print("Full Quantity", full_total_quantity, "\nFull Price", full_total_price)
+
 
 
 
