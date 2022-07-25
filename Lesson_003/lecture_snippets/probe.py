@@ -1,0 +1,1 @@
+print("vasia and petia".title())
